@@ -1,6 +1,6 @@
 from django.contrib import admin  # noqa
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from .models import *
+from core import models
 # Register your models here.
 
 
@@ -9,4 +9,4 @@ class UserAdmin(BaseUserAdmin):
     list_display = ['email', 'name']
 
 
-admin.site.register(User, UserAdmin)
+admin.site.register(models.User, UserAdmin)
